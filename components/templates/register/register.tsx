@@ -37,7 +37,7 @@ function Register() {
     } else if (step === 3) {
   
       console.log("Register user with email:", email, "and password:", password);
-      // Add your registration logic here
+     
     }
   };
 

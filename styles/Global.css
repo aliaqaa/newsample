@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary-cyan: #01cec9;
+  --secondary-darkgreen: hsl(178, 100%, 20%);
+  --authOrangbutton: #E48900;
+  --linearbg: linear-gradient(
+    163deg,
+    rgba(228, 137, 0, 0.7820378151260504) 22%,
+    rgba(1, 206, 201, 0.7820378151260504) 100%
+  );
+  font: kalameh;
+}
+@font-face {
+  font-family: kalameh;
+  src: url(/public/fonts/kalamehBlack.ttf);
+}
+body {
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+.container {
+  margin: auto;
+}
+.linear-background {
+  background: linear-gradient(
+    to-bottom-right,
+    #01cec9 22%,
+    #e48900 22%,
+    #e48900 78%
+  );
+}
+#authInputs {
+  margin: auto;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: inset;
+  border: 0.5px solid wheat;
+  padding:10px 10px;
+  font-family: vazir;
+  
+}
+#authInputs:focus {
+ outline: none;
+
+}

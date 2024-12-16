@@ -8,6 +8,7 @@ import DefautLayout from "../layouts/DefautLayout";
 import UserPanelLayout from "@/layouts/UserPanelLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import "../styles/Global.css";
+import { Toaster } from "react-hot-toast";
 
 const layouts = {
   auth: AuthLayout,
@@ -40,6 +41,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <QueryClientProvider client={queryClient}>
           <Layout>
             <Component {...pageProps} />
+            <Toaster
+                position="top-center"
+                toastOptions={{
+                  className:
+                    "font-peyda text-sm !text-white !bg-primary-lighter dark:!bg-primary-darker",
+                }}></Toaster>
           </Layout>
         </QueryClientProvider>
       </ThemeProvider>

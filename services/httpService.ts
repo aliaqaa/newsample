@@ -1,6 +1,6 @@
 import axios from "axios";
-import swal from "sweetalert";
 import Cookies from "js-cookie";
+import toast from "react-hot-toast";
 
 axios.interceptors.request.use(
   function (config) {
@@ -32,15 +32,15 @@ axios.interceptors.response.use(
   function (error) {
     switch (error?.response?.status) {
       case 400: {
-        swal(error?.response?.data.ErrorMessage);
+        toast.error(error?.response?.data.ErrorMessage);
         break;
       }
       case 401: {
-        swal("شما برای این عمل، احراز هویت نشده اید");
+        toast.error("شما برای این عمل، احراز هویت نشده اید");
         break;
       }
       case 403: {
-        swal("دسترسی غیرمجاز");
+        toast.error("دسترسی غیرمجاز");
         break;
       }
       default: {

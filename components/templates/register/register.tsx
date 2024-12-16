@@ -3,9 +3,10 @@ import { Form } from "@nextui-org/react";
 import AuthOrangButton from "@/components/modules/authOrangeButton/AuthOrangButton";
 import AuthInput from "@/components/modules/AuthInput/AuthInput";
 import Link from "next/link";
-import { sendCodeApi } from "@/services/useAuth";
-import swal from "sweetalert"; // Make sure to install and import SweetAlert
-
+import { registerPhone } from "@/interfaces/registerphone.interface";
+import { useSendCodeApi } from "@/hooks/UseAuth";
+import Register1 from "./register 1/Register1";
+import Register2 from "./register 2/Register2";
 function Register() {
   const [step, setStep] = useState(1);
   const [phone, setPhone] = useState("");
@@ -14,59 +15,24 @@ function Register() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   
-  const { mutate, isPending, isSuccess } = sendCodeApi();
 
+ 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (step === 1) {
-      mutate({ phone }, {
-        onSuccess: () => {
-          swal("Code has been sent to your phone");
-          setStep(2); 
-        },
-        onError: () => {
-          swal("Failed to send code, please try again.");
-        }
-      });
-    } else if (step === 2) {
-  
-      console.log("Verify SMS code:", smsKey);
-     
-      setStep(3); 
-    } else if (step === 3) {
-  
-      console.log("Register user with email:", email, "and password:", password);
-     
-    }
   };
 
   return (
     <div className="items-center w-52 m-auto ">
-      <Form validationBehavior="native" onSubmit={onSubmit}>
+   
         {step === 1 && (
           <>
-            <AuthInput
-              placeholder="شماره همراه"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="my-7"
-            />
-            <AuthOrangButton title="دریافت کد تایید" disabled={isPending} />
-            <Link href="/auth?type=login" className="text-sky-500 font-extrabold">
-              ورود
-            </Link>
+           <Register1 phone={phone} setPhone={setPhone} setStep={setStep}/>
           </>
         )}
         {step === 2 && (
           <>
-            <AuthInput
-              placeholder="کد تایید"
-              value={smsKey}
-              onChange={(e) => setSmsKey(e.target.value)}
-              className=""
-            />
-            <AuthOrangButton title="تایید کد" />
+            <Register2 phone={phone} setPhone={setPhone} setStep={setStep}/>
           </>
         )}
         {step === 3 && (
@@ -94,7 +60,6 @@ function Register() {
             <AuthOrangButton title="ثبت نام" />
           </>
         )}
-      </Form>
     </div>
   );
 }

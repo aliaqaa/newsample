@@ -49,10 +49,10 @@ body {
 }
 .nav-link {  
   text-decoration: none;  
-  color: blue; 
+
 }  
 
 .active {  
-  font-weight: bold;  
-  color: red; 
+  border-image: linear-gradient(to right, rgba(251, 157, 157, 0) 0%, rgb(214, 139, 139) 50%, rgba(233, 139, 139, 0) 100%) 1;
+border-bottom: 4px orange solid;
 }

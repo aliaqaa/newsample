@@ -8,9 +8,11 @@ import ActiveLink from "../ActiveLink/ActiveLink";
 function Navbar() {
   return (
     <>
-      <div className="container m-auto flex justify-between p-5">
+      <div className="container m-auto flex justify-between px-5">
+        <Link href="/">
         <Image src={logo} alt="logo" />
-        <div className="flex justify-around items-center">
+        </Link>
+        <div className="flex justify-around items-center font-extrabold">
         {defaultNavbarItems.map(item => (  
           <ActiveLink   
             key={item.id}          
@@ -22,7 +24,11 @@ function Navbar() {
           </ActiveLink>  
         ))}  
         </div>
+        <Link href="/auth">
+        
         <UserAccButton />
+        
+        </Link>
       </div>
     </>
   );

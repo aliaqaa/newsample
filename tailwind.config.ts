@@ -14,6 +14,7 @@ export default {
         primaryCyan: "var(--primary-cyan)",
         linearbg: "var(--linearbg)",
         authOrangbutton: "var(--authOrangbutton)",
+        cyanlogin: "#008D8A",
       },
       backgroundImage: {
         'linear-bg': 'linear-gradient(123deg, rgba(228,137,0,0.299124649859944) 22%, rgba(1,206,201,0.299124649859944) 100%);',

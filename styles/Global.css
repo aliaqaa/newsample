@@ -47,3 +47,12 @@ body {
  outline: none;
 
 }
+.nav-link {  
+  text-decoration: none;  
+  color: blue; 
+}  
+
+.active {  
+  font-weight: bold;  
+  color: red; 
+}

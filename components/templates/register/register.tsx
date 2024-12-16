@@ -9,7 +9,7 @@ import Register1 from "./register 1/Register1";
 import Register2 from "./register 2/Register2";
 function Register() {
   const [step, setStep] = useState(1);
-  const [phone, setPhone] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [smsKey, setSmsKey] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,12 +27,12 @@ function Register() {
    
         {step === 1 && (
           <>
-           <Register1 phone={phone} setPhone={setPhone} setStep={setStep}/>
+           <Register1 phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} setStep={setStep}/>
           </>
         )}
         {step === 2 && (
           <>
-            <Register2 phone={phone} setPhone={setPhone} setStep={setStep}/>
+            <Register2 phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} setStep={setStep}/>
           </>
         )}
         {step === 3 && (

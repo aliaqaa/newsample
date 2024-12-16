@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 position="top-center"
                 toastOptions={{
                   className:
-                    "font-peyda text-sm !text-white !bg-primary-lighter dark:!bg-primary-darker",
+                    "font-peyda  !bg-primary-lighter dark:!bg-primary-darker",
                 }}></Toaster>
           </Layout>
         </QueryClientProvider>

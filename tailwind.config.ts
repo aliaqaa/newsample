@@ -16,7 +16,7 @@ export default {
         authOrangbutton: "var(--authOrangbutton)",
       },
       backgroundImage: {
-        'linear-bg': 'linear-gradient(123deg, rgba(228,137,0,0.499124649859944) 22%, rgba(1,206,201,0.499124649859944) 100%);',
+        'linear-bg': 'linear-gradient(123deg, rgba(228,137,0,0.299124649859944) 22%, rgba(1,206,201,0.299124649859944) 100%);',
       },
     },
   },

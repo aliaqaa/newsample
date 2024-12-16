@@ -27,6 +27,7 @@ export const useSendCodeApi = () => {
     },
     onError: () => {
       toast.error("خطا در برقراری ارتباط");
+     
     },
   });
 };

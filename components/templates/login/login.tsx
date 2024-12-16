@@ -6,7 +6,7 @@ function login() {
     <div className="m-auto">
       <AuthInput type="email" placeholder="ایمیل"/>
       <AuthInput type="password" placeholder="رمز عبور" className="py-7"/>
-    <AuthOrangButton title=""/>
+    <AuthOrangButton title="ورود"/>
     </div>
   );
 }

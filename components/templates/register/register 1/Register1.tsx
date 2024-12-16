@@ -7,24 +7,23 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 
-function Register1({ setPhone, phone, setStep }: any) {
+function Register1({ setPhoneNumber, phoneNumber, setStep }: any) {
   const { mutate, isPending, isSuccess } = useSendCodeApi();
   useEffect(() => {
     if (isSuccess) {
-        setStep(2);
-    
+      setStep(2);
     }
-  }, [isSuccess])
+  }, [isSuccess]);
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent default form submission
-    mutate(phone);
+    e.preventDefault();
+    mutate(phoneNumber);
   };
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col justify-center items-center content-center ">
       <Form onSubmit={onSubmit}>
         <AuthInput
           placeholder="شماره همراه"
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={(e) => setPhoneNumber(e.target.value)}
           className="my-7"
         />
         <AuthOrangButton title="دریافت کد تایید" />

@@ -28,7 +28,7 @@ function Auth() {
           ورود
         </button>
       </div>
-      <div className="bg-linear-bg w-[500px] h-96 rounded-2xl items-center content-center ">
+      <div className="bg-linear-bg w-[700px] h-[400px] rounded-2xl items-center content-center p-10">
         {authType === "login" ? <Login /> : <Register />}
       </div>
     </div>

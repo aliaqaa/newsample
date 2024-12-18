@@ -4,7 +4,7 @@
 :root {
   --primary-cyan: #01cec9;
   --secondary-darkgreen: hsl(178, 100%, 20%);
-  --authOrangbutton: #E48900;
+  --authOrangbutton: #e48900;
   --linearbg: linear-gradient(
     163deg,
     rgba(228, 137, 0, 0.7820378151260504) 22%,
@@ -39,20 +39,27 @@ body {
   border-radius: 10px;
   box-shadow: inset;
   border: 0.5px solid wheat;
-  padding:10px 10px;
+  padding: 10px 10px;
   font-family: vazir;
-  
 }
 #authInputs:focus {
- outline: none;
-
+  outline: none;
 }
-.nav-link {  
-  text-decoration: none;  
+.nav-link {
+  text-decoration: none;
+}
 
-}  
-
-.active {  
-  border-image: linear-gradient(to right, rgba(251, 157, 157, 0) 0%, rgb(214, 139, 139) 50%, rgba(233, 139, 139, 0) 100%) 1;
-border-bottom: 4px orange solid;
+.active {
+  border-image: linear-gradient(
+      to right,
+      rgba(251, 157, 157, 0) 0%,
+      rgb(214, 139, 139) 50%,
+      rgba(233, 139, 139, 0) 100%
+    )
+    1;
+  border-bottom: 4px orange solid;
+}
+.disc-green::marker{
+ color: #01cec9;
+  
 }

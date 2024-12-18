@@ -1,15 +1,56 @@
 import Image from "next/image";
 import React from "react";
+import { FaSearch } from "react-icons/fa";
+
 function LandingHero() {
   return (
-    <div className="container flex justify-around my-20 p-10">
-      <div id="RightSide">asdsads</div>
+    <div className="container flex justify-around my-20 p-10 ">
+      <div id="RightSide" className="p-20">
+        <h1 className="text-6xl flex font-extrabold">
+          عنوان
+          <h1 className="text-6xl text-sky-400">آموزشگاه</h1>
+        </h1>
+        <span className=" text-start my-10 ">
+          <p className="my-2 ">
+            مرجع اموزش زنده و تعاملی برنامه نویسی حوزه وب{" "}
+          </p>
+          <p className="my-2 ">
+            با دسترسی به بیش از هفت هزار ویدیوی اموزشی به زبان فارسی
+          </p>
+        </span>
+        <span className="border border-gray-200 rounded-full p-3 bg-transparent ">
+          <input
+            type="text"
+            className="bg-transparent focus:outline-none px-2 my-10 w-60"
+            placeholder="دنبال چی میگردی؟"
+          />
+          <button className="bg-authOrangbutton p-2 rounded-full text-white">
+            <FaSearch />
+          </button>
+        </span>
+      </div>
       <div id="leftSide">
         <span className="relative">
-        <Image src="/icons/hero section main shape.png" width="500" height="100" alt="hero"/>
-        <Image src="/icons/1000 student.png" width="100" height="100" alt="hero"/>
-        <Image src="/icons/50 teacher.png" width="100" height="100" alt="hero"/>
-
+          <Image
+            src="/icons/hero section main shape.png"
+            width="500"
+            height="100"
+            alt="hero"
+          />
+          <Image
+            className="absolute -top-10 -left-10"
+            src="/icons/1000 student.png"
+            width="160"
+            height="100"
+            alt="hero"
+          />
+          <Image
+            className="absolute -bottom-16 "
+            src="/icons/50 teacher.png"
+            width="160"
+            height="100"
+            alt="hero"
+          />
         </span>
       </div>
     </div>

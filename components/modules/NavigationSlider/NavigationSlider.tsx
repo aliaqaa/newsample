@@ -7,7 +7,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import CourseCart from "../CourseCart/CourseCart";
 function NavigationSlider() {
   const { data, isLoading } = useGetCoursesTopApi(7);
-  console.log(data);
   return (
     <Swiper
       slidesPerView={1}

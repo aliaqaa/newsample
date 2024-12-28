@@ -63,3 +63,47 @@ body {
  color: #01cec9;
   
 }
+.bg-pic {  
+  background: url('/icons/Rectangle-gonda.png');  
+}
+
+
+/* The circular icon */
+.card .icon {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border: 5px solid black; /* Add white border */
+  border-radius: 50%; /* Make it circular */
+  position: absolute;
+  top: -40px; /* Center the icon with the top cutout */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Add the cutout shape using ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* Adjust height for cutout */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Cutout width */
+  height: 40px; /* Cutout height */
+  background-color: transparent; /* Match the card border/background color */
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  border-bottom: 1px solid gray;
+  z-index: 1; /* Ensure it sits above the card background */
+}
+
+/* Adjust icon to overlap the cutout correctly */
+.card .icon {
+  z-index: 2; /* Ensure the icon is above the cutout */
+}
+.hoverscale:hover{
+  transition: 0.5s;
+  scale: 1.05;
+}.hoverscale{
+  transition: 0.5s;
+}

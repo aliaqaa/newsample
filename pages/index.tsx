@@ -1,3 +1,4 @@
+import LandingArticleGrid from "@/components/templates/LandingArticleGrid/LandingArticleGrid";
 import CourseCategory from "@/components/templates/LandingCourseCategory/CourseCategory";
 import LandingFavorite from "@/components/templates/LandingFavorite/LandingFavorite";
 import LandingHero from "@/components/templates/LandingHero/LandingHero";
@@ -14,6 +15,7 @@ function index() {
       <CourseCategory />
       <LandingTeacherCategory />
       <ServiceCard />
+      <LandingArticleGrid />
     </>
   );
 }

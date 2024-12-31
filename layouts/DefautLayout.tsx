@@ -8,7 +8,6 @@ export default function DefautLayout( {children }:DefaultLayoutProps ) {
   useEffect(() => {
     setIsMounted(true);
   }, []);
-  console.log(children)
   return (
     <div className="relative" style={{ paddingTop: "2rem" }}>
       {isMounted ? (

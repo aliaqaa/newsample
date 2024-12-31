@@ -9,7 +9,7 @@ function LandingArticleGrid() {
       <h3 className="my-2 mb-10 font-extralight text-gray-600">
         خـــودت رو با خـــبر کن !{" "}
       </h3>
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="flex flex-row flex-wrap  justify-center mx-40 mb-40">
         {LandingArticleGrids.map((item)=>(
             
             <img key={item.id} src={item.img} alt="s" className="hoverscale" />
